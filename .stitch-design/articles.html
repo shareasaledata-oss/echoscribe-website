@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Articles &amp; Guides | Echos Scribes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#897269",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffdbcd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#fceee9",
+                    "on-secondary-container": "#745e51",
+                    "on-secondary-fixed": "#27180e",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-low": "#fff1ec",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#faddcc",
+                    "on-tertiary-fixed-variant": "#663d0b",
+                    "primary-container": "#b75a2d",
+                    "secondary-container": "#f7dac9",
+                    "primary": "#974317",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed-dim": "#ddc1b1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2e02",
+                    "on-tertiary-fixed": "#2c1600",
+                    "inverse-surface": "#362f2c",
+                    "on-tertiary-container": "#fffbff",
+                    "surface": "#fff8f6",
+                    "on-surface-variant": "#55433b",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#f7bb7e",
+                    "surface-tint": "#9b4519",
+                    "tertiary-container": "#9b6a35",
+                    "surface-container-high": "#f3e5e0",
+                    "outline-variant": "#dcc1b7",
+                    "surface-bright": "#fff8f6",
+                    "surface-variant": "#ede0db",
+                    "inverse-primary": "#ffb596",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#e5d7d2",
+                    "surface-container-highest": "#ede0db",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f9ebe6",
+                    "on-secondary-fixed-variant": "#564336",
+                    "secondary": "#6f5a4d",
+                    "on-surface": "#211a17",
+                    "on-primary-fixed": "#360f00",
+                    "tertiary": "#7f521f",
+                    "on-background": "#211a17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "5rem",
+                    "margin-safe": "1.5rem",
+                    "container-max": "1280px",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+        .card-shadow {
+            box-shadow: 0px 10px 30px rgba(42, 35, 32, 0.05);
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/felt-marker.png");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">leaf_spark</span>
+<span class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight">Echos Scribes</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home &amp; Garden</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tools &amp; Smart Machines</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Computer &amp; Electronics</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Clothing &amp; Accessories</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity duration-200">search</button>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-full hover:opacity-80 transition-opacity duration-200 active:scale-95">Subscribe</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Editorial Header Section -->
+<section class="bg-surface-container-low py-20 px-gutter">
+<div class="max-w-container-max mx-auto text-center">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4 block">TIPS &amp; INSIGHTS</span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface max-w-2xl mx-auto">Articles &amp; Guides</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-xl mx-auto">Curated thoughts and expert perspectives on home, technology, and intentional living.</p>
+</div>
+</section>
+<!-- Main Blog Layout (1/3 Sidebar Left, 2/3 Content Right) -->
+<div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row gap-12">
+<!-- Sidebar -->
+<aside class="w-full md:w-1/3 order-2 md:order-1">
+<div class="sticky top-24 space-y-12">
+<!-- Search Widget -->
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Search the Archives</h3>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 pl-12 focus:ring-2 focus:ring-primary text-on-surface transition-all duration-200" placeholder="Looking for something?" type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+</div>
+<!-- Categories -->
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Categories</h3>
+<ul class="space-y-2">
+<li><a class="flex justify-between items-center group py-2 border-b border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Interior Design</span>
+<span class="font-label-md text-on-surface-variant opacity-50">12</span>
+</a></li>
+<li><a class="flex justify-between items-center group py-2 border-b border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Smart Technology</span>
+<span class="font-label-md text-on-surface-variant opacity-50">08</span>
+</a></li>
+<li><a class="flex justify-between items-center group py-2 border-b border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Sustainable Living</span>
+<span class="font-label-md text-on-surface-variant opacity-50">15</span>
+</a></li>
+<li><a class="flex justify-between items-center group py-2 border-b border-outline-variant/30 hover:border-primary transition-colors" href="#">
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">Fashion Trends</span>
+<span class="font-label-md text-on-surface-variant opacity-50">06</span>
+</a></li>
+</ul>
+</div>
+<!-- Popular Tags -->
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Popular Tags</h3>
+<div class="flex flex-wrap gap-2">
+<a class="bg-surface-container-low text-primary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-fixed transition-colors" href="#">Minimalism</a>
+<a class="bg-surface-container-low text-primary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-fixed transition-colors" href="#">Workplace</a>
+<a class="bg-surface-container-low text-primary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-fixed transition-colors" href="#">Nature</a>
+<a class="bg-surface-container-low text-primary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-fixed transition-colors" href="#">Wellness</a>
+<a class="bg-surface-container-low text-primary px-4 py-1 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-primary-fixed transition-colors" href="#">AI Tools</a>
+</div>
+</div>
+<!-- Recent Posts -->
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider">Recent Scribes</h3>
+<div class="space-y-6">
+<a class="flex gap-4 group" href="#">
+<div class="w-16 h-16 shrink-0 bg-surface-variant rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A macro photograph of an expensive terracotta pot with a delicate green fern growing inside, set against a soft beige wall with gentle shadows. Minimalist and luxurious photography style consistent with high-end editorial brands." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvDGFCodP1ItfhTtYZYz9BzyhrJberXUA9HpZpmpxpwnEEZKNgARvNbEnDJmkSCQgq9AZvJNtYCb0a77lorL4k1LRCOlcIBMyvHzz8SfGjZ1HyCEerjT8LL5PgL6T0nkc8tca1cpANBfYXlmkQIB4WQcLD3Ve4aXu6nTJs_ApuOCAhlMolG8mef0RyHui-TTPA5fhz59PmD7AF4PJ6ucTRrUdrweqft8O0XGkGYmhUE9ygPnVJmXCfcLAkHj8EIr9JkNNvj4EtvWZP"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2">The Art of Mindful Decoration in Modern Homes</h4>
+<span class="text-[12px] text-on-surface-variant font-body-md mt-1">Oct 24, 2023</span>
+</div>
+</a>
+<a class="flex gap-4 group" href="#">
+<div class="w-16 h-16 shrink-0 bg-surface-variant rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek minimalist workspace with a thin laptop on a warm wood desk, surrounded by a single ceramic mug and a soft white linen notebook. The lighting is natural and bright, creating a calm, high-key aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD3OH-JEu2vOIqAKOF7uwvd1HTNYvEIRc1VNrg9Z0kTz8L5N0ePiXiPMlqXAG3sJ5-_k2iQ9SF0WGoGSujdzfLh5XlUQfGcLgRBTAAx8zY5mjAFPPePu2DdBHqIpZHhTPR_7_XlX_1U4LK65uT7WW0E42V7jAKIwwJ9Y2pQVqHUAQJiMLJIW3hQp2bq6GE_Ay4mOOqBw3tA4hvPjbF6-pcUPrYUrUlqXaIkGHc6_796VGW426-SjNTIcBRlEpzLTdQq_CfD0kPv_vW"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-label-md text-on-surface group-hover:text-primary transition-colors line-clamp-2">How Technology is Reshaping our Domestic Spaces</h4>
+<span class="text-[12px] text-on-surface-variant font-body-md mt-1">Oct 21, 2023</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Area -->
+<div class="w-full md:w-2/3 order-1 md:order-2 space-y-12">
+<!-- Blog Card 1 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow flex flex-col sm:flex-row hover:translate-y-[-4px] transition-transform duration-300">
+<div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A beautifully composed interior scene showing a soft terracotta-colored armchair next to a tall, minimalist lamp. Large floor-to-ceiling windows reveal a soft, foggy garden outside. The lighting is diffused and warm, reflecting a serene editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6N_y8nNDECTuquxon4FZHNy9kVfqIlzrhH-zxLTkuQe1u51FbPYrVW2rsoCaEfBAM0a9y9rHerelu-LiEgphcDfafDTZSjCSTLavaePlJHevWzW2dJhhoNsxTDmjTmMxLRnoxZLDVDbwxt-dhqDPnvlBxYQ_-qf2EOiSBYUZgn3g-BTXpsYn6BfzUVW9glYQSgM4jsqRXZ1kon4RuD6AtypDHQyf5JCwoCENUDLrFHO0Xn478M48eNjDRqiHzQMk_toAGArwNrEQ"/>
+</div>
+<div class="p-8 sm:p-10 flex flex-col flex-1">
+<div class="flex items-center gap-4 mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-md text-[12px] uppercase tracking-wider">Home &amp; Garden</span>
+<span class="text-on-surface-variant font-label-md text-[12px] uppercase tracking-wider">8 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 leading-tight hover:text-primary transition-colors cursor-pointer">Reclaiming Serenity: The Shift Towards Minimalist Interiors</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">In an age of digital noise, our physical spaces are becoming the final frontier for mental clarity. Discover why the 'quiet home' movement is more than just an aesthetic choice, but a necessity for modern wellness.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of a woman with a kind expression, wearing a neutral-toned linen shirt against a soft blush background. The style is clean, modern, and editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPvffe1N5fcA3GPXgJ0S8qqgGbOKQNTKFTEkNKx-nMm5zASCmi-9IaoiOGEt2_Pqj-xQE1mTmLENQ5wLpTNvDxGpQS-sQ4pdzjRUkTuhBoYThBltOZMIjLdq690IwQ-94QFw5hitVbBzqob97Gtlahw8axoEESkjU_OctrVr24rY0xXWBV7eXxkqYeCc3EjsmrpuPkLQoXe2pVowMUS7_Cc5x26Dqf1M1KWAOowIcgY_4B8RVWmg6aAgRjRukUQDXu62sKAzz_gZTf"/>
+</div>
+<span class="font-label-md text-on-surface">Evelyn Rose</span>
+</div>
+<a class="text-primary font-label-md hover:underline flex items-center gap-1" href="#">
+                                Read More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Blog Card 2 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow flex flex-col sm:flex-row hover:translate-y-[-4px] transition-transform duration-300">
+<div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A minimalist flat lay of high-tech gadgets including a pair of designer headphones, a slim tablet, and a smart pen on a textured paper background. The color palette is composed of soft tans, whites, and subtle metallic copper accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCotQSHrIp4fnVZ2wHJjsv5RWseTDCIupS5N1a2_ePbnk_b2dlGNlR61Za6ApQSxnWEc21jOBBLST496_s5Fy9tzr-hA_kNvNghFgROrQKFfBG4UhlcLXS0za66PK_GViFkX-2IbT7mrjOOYr80Go6KF-Es5W1JHXsrav2jIPE4Te_vFdzUhrA-OKg5lvawILxjw3RvRBi_CCYb9ZaiIz6pj6N43GNgPwx4kU8S7LHlMZ-wek4wGCKitGYjcstNc-qsk1-UlztjM2ZU"/>
+</div>
+<div class="p-8 sm:p-10 flex flex-col flex-1">
+<div class="flex items-center gap-4 mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-md text-[12px] uppercase tracking-wider">Technology</span>
+<span class="text-on-surface-variant font-label-md text-[12px] uppercase tracking-wider">12 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 leading-tight hover:text-primary transition-colors cursor-pointer">Intelligent Living: Smart Tools that Fade into the Background</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">The best technology is the kind you don't see. We explore the latest smart machines designed with an 'invisible' philosophy—focusing on utility and aesthetic harmony rather than screens and blinking lights.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a creative designer with glasses, wearing a dark turtleneck against a textured grey wall. Sophisticated and artistic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm7nZhU8fbM_2z2ISZCDOaMGQk9hxFhBtHo_X75j0jw4oFN5OFuqYWxqihiQrNEUFM5N_NuybHHV9ZButJZdbiw_nYwpgclmaTZxtkP3gODorFWvLJenom9Wz0yYE6G5MMVygvr8t6CnkEVx86BcT5g4U1NaC1IhFd58ghnGUKxSBZWz1TWWZycpVC2s7QYNvsF0IyEEO1OTnoxxxEXqgnn-xrHvft9RILNxLzs3beG08LmRf9WDRqVkJqahcAw4OEvzzmpzwZtpPy"/>
+</div>
+<span class="font-label-md text-on-surface">Julian Thorne</span>
+</div>
+<a class="text-primary font-label-md hover:underline flex items-center gap-1" href="#">
+                                Read More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Blog Card 3 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow flex flex-col sm:flex-row hover:translate-y-[-4px] transition-transform duration-300">
+<div class="w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A close-up shot of high-quality organic cotton fabrics stacked in a neat pile. The textures are rich and tactile, showing the weave of the material. Warm, golden hour sunlight spills across the layers, creating soft highlights and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDATbAYnhOGGqEvgupRxh_d2SdWXEy17w5QZyXCJhSyDPrM8nYEChV4tBdHM63m4Z01TnVWRqjSFYGkl4lz4q_C_DU2LhWWEKtmzj8lVju_BXjDo3YuyzxpCLXuLfq_LnU6RTFS1YXR4a3EtANUvXzGN30jUIhrT175Ohmiu7UZPgkw1Qwt8aeeK35FlJuBaO1S1yDBVAbakDq2W9SECJOSLAkkJiuFRo6Ltf_Njjp97XROnaE-L2UEE6wBp-5oGSo9o0QxE85Djt3v"/>
+</div>
+<div class="p-8 sm:p-10 flex flex-col flex-1">
+<div class="flex items-center gap-4 mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-md text-[12px] uppercase tracking-wider">Lifestyle</span>
+<span class="text-on-surface-variant font-label-md text-[12px] uppercase tracking-wider">5 min read</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 leading-tight hover:text-primary transition-colors cursor-pointer">The Sustainable Closet: Building a Capsule Collection</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Quality over quantity has never been more relevant. Learn the art of selecting timeless pieces that respect the environment and simplify your daily ritual of dressing.</p>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young fashion stylist with curly hair, in a cream-colored knit sweater. Bright and airy photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0MYmNtWkvKPx-3l4DhegIAbMeioRdQWPEOoCuI6P4kOIhNYvVKazVfveMDPZT1z7741GOVXI8Acg27muwgLho__ll1I8YLQiLy91gIKNim2X1IHsciA6aUGFvSmxPVKyKFkgX6J-Qu-By7Qebl-o9Q3sXfnHHxnnjSCvQRbk5XDEeZelRxqHHGHaPAeWVYEP9Wu2Fk36wwqUtuohjK7c5rtt_Fp_s5wdItEp-eCIfPE-VT-moReJWKd2l6vlgrYCp3M3p8InVukPt"/>
+</div>
+<span class="font-label-md text-on-surface">Maya Sterling</span>
+</div>
+<a class="text-primary font-label-md hover:underline flex items-center gap-1" href="#">
+                                Read More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Pagination -->
+<nav class="flex items-center justify-center gap-2 pt-12">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-on-primary font-label-md shadow-lg scale-110">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-primary-fixed transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-primary-fixed transition-colors">3</button>
+<span class="px-2 text-on-surface-variant/50">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-primary-fixed transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+<!-- Newsletter Section (Editorial style) -->
+<section class="bg-primary py-24 px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-12 text-on-primary">
+<div class="max-w-md">
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg mb-4">Scribed for You</h2>
+<p class="font-body-lg text-primary-fixed/80">Join our community of over 20,000 readers and receive a weekly digest of our most thoughtful articles directly in your inbox.</p>
+</div>
+<div class="w-full max-w-lg">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-primary-container border-none text-on-primary placeholder:text-primary-fixed/50 rounded-full px-6 py-4 focus:ring-2 focus:ring-primary-fixed" placeholder="Your email address" type="email"/>
+<button class="bg-white text-primary font-label-md px-10 py-4 rounded-full hover:bg-primary-fixed transition-colors whitespace-nowrap">Join Us</button>
+</form>
+<p class="text-[12px] mt-4 opacity-70 font-body-md">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-tertiary-fixed dark:text-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<!-- Brand Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">leaf_spark</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed dark:text-tertiary">Echos Scribes</span>
+</div>
+<p class="font-body-md text-surface-variant leading-relaxed">Defining the new digital editorial experience with warmth, intention, and clarity.</p>
+<div class="flex gap-4">
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+</div>
+</div>
+<!-- Links 1 -->
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Explore</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Home</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Latest Stories</a></li>
+<li><a class="font-body-md text-tertiary-fixed font-bold" href="#">Blog Archives</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Categories</a></li>
+</ul>
+</div>
+<!-- Links 2 -->
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Contributors</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Careers</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Links 3 -->
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="px-gutter pb-12 max-w-container-max mx-auto">
+<div class="border-t border-surface-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-label-md text-surface-variant opacity-60">© 2024 Echos Scribes. All rights reserved.</p>
+<div class="flex items-center gap-2 text-surface-variant opacity-60">
+<span class="font-label-md">Crafted with</span>
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md">for the mindful.</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Lightweight interaction for search bar focus
+        const searchInput = document.querySelector('input[type="text"]');
+        const searchIcon = document.querySelector('.group .material-symbols-outlined');
+        
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchIcon.classList.add('text-primary');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchIcon.classList.remove('text-primary');
+            });
+        }
+
+        // Card hover state smooth handling
+        const cards = document.querySelectorAll('article');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('z-10');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('z-10');
+            });
+        });
+    </script>
+</body></html>

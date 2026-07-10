@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>404 Page Not Found | Echos Scribes</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#897269",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffdbcd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#fceee9",
+                    "on-secondary-container": "#745e51",
+                    "on-secondary-fixed": "#27180e",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-low": "#fff1ec",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#faddcc",
+                    "on-tertiary-fixed-variant": "#663d0b",
+                    "primary-container": "#b75a2d",
+                    "secondary-container": "#f7dac9",
+                    "primary": "#974317",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed-dim": "#ddc1b1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2e02",
+                    "on-tertiary-fixed": "#2c1600",
+                    "inverse-surface": "#362f2c",
+                    "on-tertiary-container": "#fffbff",
+                    "surface": "#fff8f6",
+                    "on-surface-variant": "#55433b",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#f7bb7e",
+                    "surface-tint": "#9b4519",
+                    "tertiary-container": "#9b6a35",
+                    "surface-container-high": "#f3e5e0",
+                    "outline-variant": "#dcc1b7",
+                    "surface-bright": "#fff8f6",
+                    "surface-variant": "#ede0db",
+                    "inverse-primary": "#ffb596",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#e5d7d2",
+                    "surface-container-highest": "#ede0db",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f9ebe6",
+                    "on-secondary-fixed-variant": "#564336",
+                    "secondary": "#6f5a4d",
+                    "on-surface": "#211a17",
+                    "on-primary-fixed": "#360f00",
+                    "tertiary": "#7f521f",
+                    "on-background": "#211a17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "5rem",
+                    "margin-safe": "1.5rem",
+                    "container-max": "1280px",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fff8f6; /* Blush background from tokens */
+        }
+        .editorial-shadow {
+            box-shadow: 0px 10px 30px rgba(42, 35, 32, 0.05);
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell: TopNavBar -->
+<nav class="docked full-width top-0 sticky z-40 bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="feather">features</span>
+<span class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface">Echos Scribes</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Home &amp; Garden</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Tools &amp; Smart Machines</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Computer &amp; Electronics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity" data-icon="search">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-all duration-200">Subscribe</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-[819px] flex flex-col items-center justify-center px-gutter text-center relative overflow-hidden">
+<!-- Abstract Decorative Background Element -->
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-20 -left-20 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
+<!-- Illustration/Icon Section -->
+<div class="mb-8 relative group">
+<div class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full bg-surface-container-low flex items-center justify-center editorial-shadow transition-transform duration-500 group-hover:scale-105">
+<span class="material-symbols-outlined text-primary text-[80px] md:text-[120px] transition-all duration-500 group-hover:rotate-12" data-icon="auto_stories" style="font-variation-settings: 'wght' 200;">auto_stories</span>
+</div>
+<!-- Floating Decorative Symbols -->
+<span class="absolute top-0 right-1/4 material-symbols-outlined text-tertiary/30 animate-bounce" data-icon="edit_note">edit_note</span>
+<span class="absolute bottom-10 left-1/4 material-symbols-outlined text-outline-variant/40" data-icon="ink_pen" style="animation: pulse 3s infinite;">ink_pen</span>
+</div>
+<!-- 404 Headline -->
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 tracking-tight">
+            404 — Page Not Found
+        </h1>
+<!-- Friendly Body Text -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+            It seems the page you’re looking for has wandered off the path. Even the most beautiful stories have occasional missing chapters. Let's get you back to the beginning where inspiration awaits.
+        </p>
+<!-- Terracotta Pill Button -->
+<div class="flex flex-col sm:flex-row gap-4 items-center">
+<a class="bg-primary text-white font-label-md text-label-md px-10 py-4 rounded-full editorial-shadow hover:opacity-90 active:scale-95 transition-all duration-200 flex items-center gap-2" href="/">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Return to Home
+            </a>
+<a class="text-primary font-label-md text-label-md px-10 py-4 rounded-full border border-primary/20 hover:bg-primary/5 transition-colors duration-200" href="#">
+                Browse the Blog
+            </a>
+</div>
+<!-- Semantic Identity Component (Hidden/Search) -->
+<div class="mt-16 pt-8 border-t border-outline-variant/30 w-full max-w-lg">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-lg border border-transparent focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-body-md text-on-surface placeholder:text-outline" placeholder="Search for another story..." type="text"/>
+</div>
+</div>
+</main>
+<!-- Footer: Espresso -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="feather">features</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed dark:text-tertiary">Echos Scribes</span>
+</div>
+<p class="font-body-md text-body-md text-surface-variant leading-relaxed">
+                    Curating luxury editorial content for the modern home, garden, and digital lifestyle.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h4 class="font-label-md text-label-md text-tertiary-fixed mb-6 uppercase tracking-widest">Company</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Home</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Our Mission</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h4 class="font-label-md text-label-md text-tertiary-fixed mb-6 uppercase tracking-widest">Resources</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Blog</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Contact</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Legal</a></li>
+</ul>
+</div>
+<!-- Newsletter/Social -->
+<div>
+<h4 class="font-label-md text-label-md text-tertiary-fixed mb-6 uppercase tracking-widest">Newsletter</h4>
+<p class="font-body-md text-body-md text-surface-variant mb-4">Join our editorial circle for weekly inspiration.</p>
+<div class="flex items-center border-b border-surface-variant py-2">
+<input class="bg-transparent border-none focus:ring-0 text-white w-full text-sm" placeholder="Email Address" type="email"/>
+<button class="material-symbols-outlined text-tertiary-fixed" data-icon="arrow_forward">arrow_forward</button>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-surface-variant/10 px-gutter py-8 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-md text-body-md text-surface-variant/60">© 2024 Echos Scribes. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="material-symbols-outlined text-tertiary-fixed hover:scale-110 transition-transform" data-icon="share" href="#">share</a>
+<a class="material-symbols-outlined text-tertiary-fixed hover:scale-110 transition-transform" data-icon="rss_feed" href="#">rss_feed</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle Parallax / Mouse interaction for the 404 illustration
+        document.addEventListener('mousemove', (e) => {
+            const icon = document.querySelector('.material-symbols-outlined[data-icon="auto_stories"]');
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            icon.style.transform = `translate(${x}px, ${y}px) rotate(${x * 0.5}deg)`;
+        });
+
+        // Search Input Micro-interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('shadow-lg', 'scale-[1.02]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('shadow-lg', 'scale-[1.02]');
+        });
+    </script>
+</body></html>

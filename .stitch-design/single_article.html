@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Echos Scribes | The Art of Mindful Living</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#897269",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffdbcd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#fceee9",
+                    "on-secondary-container": "#745e51",
+                    "on-secondary-fixed": "#27180e",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-low": "#fff1ec",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#faddcc",
+                    "on-tertiary-fixed-variant": "#663d0b",
+                    "primary-container": "#b75a2d",
+                    "secondary-container": "#f7dac9",
+                    "primary": "#974317",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed-dim": "#ddc1b1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2e02",
+                    "on-tertiary-fixed": "#2c1600",
+                    "inverse-surface": "#362f2c",
+                    "on-tertiary-container": "#fffbff",
+                    "surface": "#fff8f6",
+                    "on-surface-variant": "#55433b",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#f7bb7e",
+                    "surface-tint": "#9b4519",
+                    "tertiary-container": "#9b6a35",
+                    "surface-container-high": "#f3e5e0",
+                    "outline-variant": "#dcc1b7",
+                    "surface-bright": "#fff8f6",
+                    "surface-variant": "#ede0db",
+                    "inverse-primary": "#ffb596",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#e5d7d2",
+                    "surface-container-highest": "#ede0db",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f9ebe6",
+                    "on-secondary-fixed-variant": "#564336",
+                    "secondary": "#6f5a4d",
+                    "on-surface": "#211a17",
+                    "on-primary-fixed": "#360f00",
+                    "tertiary": "#7f521f",
+                    "on-background": "#211a17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "5rem",
+                    "margin-safe": "1.5rem",
+                    "container-max": "1280px",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .paper-texture {
+        background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+      }
+      .editorial-shadow {
+        box-shadow: 0px 10px 30px rgba(42, 35, 32, 0.05);
+      }
+      body {
+        cursor: default;
+      }
+      ::selection {
+        background-color: #ffdbcd;
+        color: #974317;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Echos Scribes</span>
+</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Home &amp; Garden</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Tools &amp; Smart Machines</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Computer &amp; Electronics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="#">Clothing &amp; Accessories</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Blog</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors p-2">search</button>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-80 transition-opacity active:scale-95 duration-200">Subscribe</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-gutter py-12 md:py-20">
+<!-- Article Header -->
+<header class="max-w-4xl mx-auto text-center mb-12">
+<span class="inline-block bg-primary text-on-primary px-4 py-1 rounded-full text-label-md font-label-md uppercase tracking-widest mb-6">Home &amp; Garden</span>
+<h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-8 tracking-tight leading-tight">The Alchemist’s Atrium: Weaving Nature into Modern Living Spaces</h1>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a woman with warm features, smiling softly, against a soft-focus studio background with warm lighting and neutral tones. She is wearing a cream-colored organic linen shirt, embodying the minimalist-organic aesthetic of a high-end editorial journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWdMRmq0QR4nZfgc3Q3-CdxeeCq2FyOwyllzowf90FnBGnbUFr9i0u7fMyRQKCAhb14DeUuO3oZEY7wAlEZnZdP9wlsKrxyE91eE0t2yeD_R3aewQQfrB14VVfFLDXYC51cAYdt1X0zQsXQalFmva9wdh8KETB9YQG2DgrEMXsUUcIGSr0OhgJEr8dG5ca3q3O1dBElaHVgE82JVl5bmf7jvtGOEphrAZZ7LB6mRHH4DmtvRCkU97zOYi_PFVW3pjzeTTeq1kXAdNu"/>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">By Elena Vance</p>
+<p class="font-body-md text-sm text-on-surface-variant">March 14, 2024 • 8 min read</p>
+</div>
+</div>
+</header>
+<!-- Featured Image -->
+<div class="w-full mb-16 px-0 md:px-12">
+<div class="relative aspect-video rounded-[32px] overflow-hidden editorial-shadow">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A sun-drenched, high-ceilinged modern living room with large floor-to-ceiling windows showing lush green foliage outside. The interior features natural wood furniture, a soft blush-toned sofa, and a large terracotta planter with a thriving fiddle leaf fig. The lighting is ethereal and soft, emphasizing a serene, airy atmosphere typical of luxury interior design photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAIzv6718t3BjftGJ-irdTHWDZRKMq9nyntYLkGG-CN_mf_1R5Qv3jorcySD4I6NjzpW-Nznu0PCnILP_BT8FC7ukLoxP1aM8aD7oK9LdurdEa4ICokEv7Z42Sy9CingyrEBTN0nwlIQAM1uRaUWyTfL5otdfMAhvAvx8APn2Q2Hv7XB8tAX-xw4nH-TLLfYCCPbKi1TRDfIoseLdetpjiVdqnyMwObhbuadaRw9Hh_oWl5HFqRZpXotct-4_ceomxnktfOPVxbfb1"/>
+</div>
+</div>
+<!-- Article Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Content Column -->
+<article class="lg:col-span-8 lg:col-start-3">
+<!-- Affiliate Disclosure -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant mb-10 flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<p class="font-body-md text-sm text-on-surface-variant italic leading-relaxed">
+                        Transparency is our anchor. This article contains affiliate links to curated tools and machines we believe in. If you purchase through them, we may earn a small commission at no extra cost to you, helping us keep our scribes active.
+                    </p>
+</div>
+<!-- Article Body -->
+<div class="space-y-8 text-on-surface font-body-lg text-body-lg leading-relaxed">
+<p class="first-letter:text-5xl first-letter:font-headline-lg first-letter:text-primary first-letter:mr-3 first-letter:float-left">
+                        Creating a home that feels like a sanctuary is no longer a luxury—it’s a necessity for the modern soul. As the boundaries between our digital lives and our physical spaces continue to blur, the urge to return to tactile, organic roots has never been stronger. We explore how the "New Editorial" design movement is reshaping our homes into living, breathing atriums.
+                    </p>
+<p>
+                        The core philosophy lies in the balance. It is the juxtaposition of a sleek, smart home interface against the raw, uneven texture of a hand-thrown ceramic vase. It is the way morning light filters through sheer linen curtains, casting long, soft shadows across a polished oak floor.
+                    </p>
+<!-- Pull Quote -->
+<blockquote class="my-12 py-4 px-8 border-l-4 border-primary bg-surface-container-highest/30 italic">
+<p class="font-headline-md text-headline-md text-primary leading-tight">
+                            "A home should be a reflection of the person you are becoming, not just a gallery of things you have acquired."
+                        </p>
+</blockquote>
+<h2 class="font-headline-lg text-headline-lg text-on-surface pt-6 pb-2">The Texture of Silence</h2>
+<p>
+                        When we think of "Minimalist-Organic," we often default to color palettes. But the true hero is texture. Incorporating natural fibers like hemp, jute, and undyed wool provides a sensory grounding that synthetic materials simply cannot replicate. 
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+<div class="rounded-2xl overflow-hidden aspect-square editorial-shadow">
+<img class="w-full h-full object-cover" data-alt="Macro photography of a textured cream-colored linen fabric next to a smooth, unglazed terracotta pot. The shot is tightly cropped with high-contrast soft shadows and bright highlights, emphasizing the physical tactile quality of the materials in a minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsR8r0JtRBneq0KN2hw_EWqkl_Nn-hf56wEOt9JwJF8rod8hDse3hoI_LgS6bgDUIyLoVhS2jmv4X7t2r4wEKL0qid8dT7pV8lnPweDERE0zGo8VFehWxz_Df-XDHgO297yxXWn7F3SebWE7TcDpH2jAsnN9dLk7UNQgAtVUeKO1s0xW-dzANXbSw1Hh1fdhurqOiYAivNK-Rw_Af9MvBkqOTGSTY1sNu4vX80aP-umRQQE05-6tbFWpGIHCbM7UGvgZwnbLEa4fXY"/>
+</div>
+<div class="rounded-2xl overflow-hidden aspect-square editorial-shadow">
+<img class="w-full h-full object-cover" data-alt="A minimalist desk setup with a sleek laptop, a small ceramic bowl holding sage leaves, and a single wildflower in a glass vase. The aesthetic is extremely clean with a soft blush background and warm natural light hitting the scene from the side." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoW7z4PUsc4zJ_yRDrLrqw7fTDQpMrceirSm39j32fQwu2R3GKz3L2Cc-DvezONEkXxJ4vdqIb_l4_roZz2zBMCKHfR8tWPFaUZEt14RJD0UgijS4nUkxqFeSf7KhIi3u26tdovEWp3ma93DdYWQSXfGkqg0clMQ7a3E-ETAHUhUyeBcHNqvWsZxvdiBbALu0Lps5-hi6lMZcIRaVRBV-32eSwnGy5HPrfWprTCNCkFHkRdBA1GCZmSG8HK_Yoh3Yh0-6Azu-jnL3z"/>
+</div>
+</div>
+<p>
+                        Beyond the aesthetic, there's the functional integration of technology. Smart machines today are shedding their cold, metallic shells in favor of matte finishes and rounded silhouettes that blend seamlessly into our "atrium" lifestyle.
+                    </p>
+</div>
+<!-- Author Bio Card -->
+<section class="mt-20 p-8 md:p-12 bg-surface-container rounded-[2rem] editorial-shadow flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left border border-outline-variant/30">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shrink-0 border-4 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Portrait of Elena Vance, a woman in her late 30s with an artistic and sophisticated style. She is seen in a sunlit garden studio surrounded by architectural sketches and indoor plants. The lighting is natural and warm, matching the premium editorial tone of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8yXHMuxuixt8qNM60YpevyYt4ILlLfwX4TlUcyfrxt24yCGvn3yD6o2eLZkymCwmq5pSqqJQy-zixjD1cRSBXvpIFzDb6jUlU3fTPzEr2PfJvAbBsVk8kErMgF64u0ZGP-jgIc4pTglfUqwPRfUDQzOLlny7kUPz9HRQxpyQzaWvh8anZcnTB6MsyaZp33ZW_YAAqwtiFQKzOpqj8DJBlMkqYK-Gvv7BWRrLu6Ij1OHxSr04X5qxm2L6IcPUMdVnTCE5CNxuqR6qK"/>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Elena Vance</h3>
+<p class="font-label-md text-primary mb-4">Senior Design Editor &amp; Sustainability Advocate</p>
+<p class="font-body-md text-on-surface-variant mb-6">
+                            Elena has spent over a decade exploring the intersection of architecture and emotional well-being. Based in a sunlight-filled loft in Portland, she chronicles the evolution of modern living with a focus on tactile luxury and biophilic design.
+                        </p>
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Share Buttons -->
+<div class="flex items-center justify-center gap-8 py-12 border-b border-outline-variant/30">
+<span class="font-label-md text-on-surface-variant uppercase tracking-widest">Share this Story</span>
+<div class="h-px w-12 bg-outline-variant"></div>
+<div class="flex gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">favorite</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">bookmark</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</article>
+</div>
+<!-- Related Posts -->
+<section class="mt-section-gap">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Continue Reading</h2>
+<a class="text-primary font-label-md text-label-md border-b border-primary hover:opacity-70 transition-opacity" href="#">View All Posts</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 editorial-shadow relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A collection of artisanal wooden kitchen tools arranged on a marble countertop. The scene is lit by warm, low-angled evening light, creating a cozy and luxurious kitchen atmosphere with terracotta accents and organic shapes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjTgi39RNlwp_W7zlzutM5d8pfXVzDTi3oH-Z7bQODBVj_Bz3kfcdEFCPl41lr7Ho6dSzthjd6gJl2IKUpdSK7i7nKlc-uc4MHtONx81aH0g-m-Gj_gdXDszYhR1s604Ry2gBB9KwYshjDLUGki7tAHw02s5CKy-ONcSNePclUuRcIOZLGkIKQv5mQ3FTVTv94LSXgcEEgfBaOyyqDmK8BFTtVNovOwZaHIHgTk5P-DXhVCd2_oV4c83995qfKN9_Oc2vJuWNT3KLA"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-label-md text-primary uppercase text-xs tracking-widest">Tools &amp; Machines</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors">The 5 Heirloom Tools Every Modern Kitchen Needs</h3>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 editorial-shadow relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up of a high-end e-ink tablet and a brass stylus resting on a textured linen surface next to a cup of espresso. The lighting is soft and morning-like, highlighting the slim profile and premium build of the electronics in a lifestyle context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrSCYTmXDkTermVfRyJIpZ8cCOJfdNjL-ObBCg2kQj7nBEEPkzTDWzZuwHew9OkDEaq_Ck4uvA_KplZxYOP91BjVCvn3vxgTtyQ3nZULMXQta9HoH_dtc-bYFtw8eIiZ5-VI3rOZoI0uETyv_DbSPIApfuF7YDTBOuaFyB-NZusQ3NgS9S5DlY7jnBj9MzUeBqqwQ43UYJmwHD8hIulB_NCXWohYZK6kT_ZI47gKdS9t-fC9fvYmuYWkTT6j1T5KRFWh9KqLlhwQWK"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-label-md text-primary uppercase text-xs tracking-widest">Electronics</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors">Digital Minimalism: A Guide to Focused Technology</h3>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden mb-6 editorial-shadow relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A rack of ethically sourced clothing made from natural fibers in a boutique with white walls and warm wood accents. The clothing colors are earthy browns, creams, and terracotta, beautifully lit to show off the soft textures of the garments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3b-uiDWt1SkXui2PSK80FSC4BK2poUmkV4_EvHpKH6VFYPE81cYAHstDB25Y-N8PSPfNkXb_bgfsBjGwx3CaBcLztcIbjUiBcg39PggLZs_dWYalCopRyOCiK5nxD_69uTj7qmZ7BSfgbNjWFq59t2Bh9b2B8nVC3wT_YtsykBzNHvWk8L4k7ONo_3mk3KOay2EFDSGOeHxs7OIP5I0rbMWbbPwzKXZBSa9BVMk6Odjz8wJ_xC0_iB5kfmeUHmRKrZ14AEC2SnjHd"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-label-md text-primary uppercase text-xs tracking-widest">Clothing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-2 group-hover:text-primary transition-colors">Capsule Wardrobes: Curating Your Personal Uniform</h3>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<!-- Brand Section -->
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed dark:text-tertiary">Echos Scribes</span>
+</div>
+<p class="font-body-md text-surface-variant/80 text-sm leading-relaxed mb-6">
+                    An editorial space dedicated to the pursuit of intentional living, craftsmanship, and the beauty of the everyday.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-surface-variant hover:text-tertiary-fixed-dim cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-surface-variant hover:text-tertiary-fixed-dim cursor-pointer transition-colors">rss_feed</span>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h4 class="font-label-md text-tertiary-fixed uppercase mb-6 tracking-widest">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Home</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-md text-tertiary-fixed font-bold" href="#">Blog</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h4 class="font-label-md text-tertiary-fixed uppercase mb-6 tracking-widest">Categories</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Home &amp; Garden</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Tools</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Electronics</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Lifestyle</a></li>
+</ul>
+</div>
+<!-- Newsletter Box -->
+<div>
+<h4 class="font-label-md text-tertiary-fixed uppercase mb-6 tracking-widest">The Journal</h4>
+<p class="font-body-md text-surface-variant text-sm mb-6">Join our weekly digest for curated insights on the new editorial movement.</p>
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<input class="w-full bg-surface-container-highest border-none focus:ring-2 focus:ring-tertiary-fixed text-white px-4 py-3 rounded-lg text-sm transition-all placeholder:text-surface-variant/50" placeholder="Your email address" type="email"/>
+<button class="w-full bg-tertiary-fixed text-on-tertiary-fixed py-3 rounded-lg font-label-md hover:bg-tertiary-fixed-dim active:translate-y-[-2px] transition-all duration-200 uppercase tracking-widest">Join Us</button>
+</form>
+</div>
+</div>
+<!-- Copyright -->
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="font-body-md text-surface-variant/60 text-xs">© 2024 Echos Scribes. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-body-md text-surface-variant/60 text-xs hover:text-tertiary-fixed transition-colors" href="#">Legal</a>
+<a class="font-body-md text-surface-variant/60 text-xs hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-surface-variant/60 text-xs hover:text-tertiary-fixed transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('shadow-md', 'py-2');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Interactive states for related cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

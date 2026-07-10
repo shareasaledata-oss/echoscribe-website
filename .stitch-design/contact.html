@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Echos Scribes</title>
+<!-- Google Fonts: Playfair Display & Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#897269",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffdbcd",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#fceee9",
+                    "on-secondary-container": "#745e51",
+                    "on-secondary-fixed": "#27180e",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-low": "#fff1ec",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "secondary-fixed": "#faddcc",
+                    "on-tertiary-fixed-variant": "#663d0b",
+                    "primary-container": "#b75a2d",
+                    "secondary-container": "#f7dac9",
+                    "primary": "#974317",
+                    "tertiary-fixed": "#ffdcbd",
+                    "secondary-fixed-dim": "#ddc1b1",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#7c2e02",
+                    "on-tertiary-fixed": "#2c1600",
+                    "inverse-surface": "#362f2c",
+                    "on-tertiary-container": "#fffbff",
+                    "surface": "#fff8f6",
+                    "on-surface-variant": "#55433b",
+                    "background": "#fff8f6",
+                    "tertiary-fixed-dim": "#f7bb7e",
+                    "surface-tint": "#9b4519",
+                    "tertiary-container": "#9b6a35",
+                    "surface-container-high": "#f3e5e0",
+                    "outline-variant": "#dcc1b7",
+                    "surface-bright": "#fff8f6",
+                    "surface-variant": "#ede0db",
+                    "inverse-primary": "#ffb596",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#ffb596",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#e5d7d2",
+                    "surface-container-highest": "#ede0db",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f9ebe6",
+                    "on-secondary-fixed-variant": "#564336",
+                    "secondary": "#6f5a4d",
+                    "on-surface": "#211a17",
+                    "on-primary-fixed": "#360f00",
+                    "tertiary": "#7f521f",
+                    "on-background": "#211a17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "5rem",
+                    "margin-safe": "1.5rem",
+                    "container-max": "1280px",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .contact-card-shadow {
+            box-shadow: 0px 10px 30px rgba(42, 35, 32, 0.05);
+        }
+        /* Custom scrollbar for better editorial feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fff8f6; }
+        ::-webkit-scrollbar-thumb { background: #dcc1b7; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-md">
+<nav class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Echos Scribes</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home &amp; Garden</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tools &amp; Smart Machines</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Computer &amp; Electronics</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Clothing &amp; Accessories</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity duration-200">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md active:scale-95 transition-transform duration-200">Subscribe</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-on-surface mb-4">Get in Touch</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">We'd love to hear from you. Whether you have a question about our curated collections or just want to say hello, our team is here to help.</p>
+</div>
+</section>
+<!-- Contact Content Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left: Contact Form -->
+<div class="bg-surface-container-lowest rounded-[16px] p-8 md:p-12 contact-card-shadow">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Send us a message</h2>
+<form class="space-y-6" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Name</label>
+<input class="bg-surface-container px-4 py-3 rounded-[4px] border-none focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Your name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Email Address</label>
+<input class="bg-surface-container px-4 py-3 rounded-[4px] border-none focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Subject</label>
+<input class="bg-surface-container px-4 py-3 rounded-[4px] border-none focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="How can we help?" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Message</label>
+<textarea class="bg-surface-container px-4 py-3 rounded-[4px] border-none focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Write your thoughts here..." rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all" type="submit">Send Message</button>
+</form>
+</div>
+<!-- Right: Info & Map -->
+<div class="space-y-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-label-md text-label-md uppercase">Our Studio</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">124 Editorial Lane,<br/>Notting Hill, London<br/>W11 2BQ, UK</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md uppercase">Inquiries</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">hello@echoscribes.com<br/>support@echoscribes.com</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Find Us</h3>
+<div class="relative w-full h-[300px] rounded-[16px] overflow-hidden contact-card-shadow">
+<div class="absolute inset-0 bg-surface-container-high flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" data-alt="A stylized, minimalist map illustration of a London neighborhood with soft terracotta and blush tones. The map features elegant typography for street names and a subtle leaf icon marking the location of a boutique office. The lighting is bright and airy, reflecting a professional and welcoming studio atmosphere." data-location="London, Notting Hill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxCCdkOd0hSPDOviZkaZMlwHQ8rVCceRhi8tf5s38TgnskRvW4GRh8MkW10FbbJsb_cJlYMiYBIwu77iGRhu4soFoztoJmrTU6SHTBYmlExGTaOw3aDHungFgzBjjYiSj06G1v1fsmATNvFl1jxk2ODSXpCgDk5iIawQ3ALCk39WJSqjg8BjUZF5lxd0dZqGThl47FBCFHccpPjJLyxjdEX7bU627-p8rjyS9rmAlvbss_jZ8MzXcpg9alCsmVjKHDUmHhpto6NuMT"/>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="w-8 h-8 bg-primary rounded-full animate-ping absolute opacity-40"></div>
+<div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg relative flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 bg-secondary-container rounded-[16px] border border-outline-variant/30">
+<h4 class="font-headline-sm text-headline-sm text-on-secondary-container mb-2">Visit our Showroom</h4>
+<p class="font-body-md text-body-md text-on-secondary-container opacity-80">Experience our collection in person. Open Monday through Friday, 10 AM to 6 PM.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-3xl mx-auto px-gutter">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Quick answers to questions you might have.</p>
+</div>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-label-md text-label-md text-on-surface">How long does shipping take?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md">
+                            Our standard shipping typically takes 3-5 business days for domestic orders and 7-14 business days for international destinations. Every package is carefully wrapped in our signature sustainable packaging.
+                        </div>
+</details>
+<!-- Accordion Item 2 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-label-md text-label-md text-on-surface">Do you offer international returns?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md">
+                            Yes, we accept returns within 30 days of purchase. Please note that for international returns, shipping costs are the responsibility of the customer unless the item arrived damaged.
+                        </div>
+</details>
+<!-- Accordion Item 3 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/20 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-label-md text-label-md text-on-surface">Can I change my subscription plan?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md">
+                            Absolutely. You can manage your subscription directly through your account dashboard or by contacting our support team. Changes take effect on your next billing cycle.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-inverse-surface">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-headline-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed">Echos Scribes</span>
+</div>
+<p class="font-body-md text-body-md text-surface-variant">Elevating the everyday with editorial clarity and minimalist luxury. Join our community of discerning readers and collectors.</p>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-tertiary-fixed uppercase">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Home</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed font-bold" href="#">Blog</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-tertiary-fixed uppercase">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant flex items-center justify-center text-surface-variant hover:text-tertiary-fixed hover:border-tertiary-fixed transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant flex items-center justify-center text-surface-variant hover:text-tertiary-fixed hover:border-tertiary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant flex items-center justify-center text-surface-variant hover:text-tertiary-fixed hover:border-tertiary-fixed transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-tertiary-fixed uppercase">Newsletter</h4>
+<div class="flex flex-col gap-4">
+<p class="font-body-md text-body-md text-surface-variant">Get editorial updates delivered to your inbox.</p>
+<div class="flex">
+<input class="bg-surface-container-highest/10 border-none text-surface-container-lowest placeholder:text-surface-variant/50 px-4 py-3 rounded-l-lg focus:ring-0 w-full" placeholder="Email address" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-4 py-3 rounded-r-lg hover:bg-tertiary-fixed-dim transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-surface-variant/10 text-center">
+<p class="font-label-md text-label-md text-surface-variant opacity-60">© 2024 Echos Scribes. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal for accordion content
+        document.querySelectorAll('details').forEach((el) => {
+            el.addEventListener('toggle', (e) => {
+                if (el.open) {
+                    el.classList.add('active-accordion');
+                    // In a real app, we'd handle closing siblings here if desired
+                } else {
+                    el.classList.remove('active-accordion');
+                }
+            });
+        });
+
+        // Form submission micro-interaction
+        const form = document.querySelector('form');
+        form.addEventListener('submit', () => {
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = 'Thank You!';
+                btn.classList.replace('bg-primary', 'bg-tertiary');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-tertiary', 'bg-primary');
+                    btn.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</body></html>

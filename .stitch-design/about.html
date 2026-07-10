@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Echos Scribes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#897269",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#ffdbcd",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#fceee9",
+                      "on-secondary-container": "#745e51",
+                      "on-secondary-fixed": "#27180e",
+                      "on-primary-container": "#fffbff",
+                      "surface-container-low": "#fff1ec",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#faddcc",
+                      "on-tertiary-fixed-variant": "#663d0b",
+                      "primary-container": "#b75a2d",
+                      "secondary-container": "#f7dac9",
+                      "primary": "#974317",
+                      "tertiary-fixed": "#ffdcbd",
+                      "secondary-fixed-dim": "#ddc1b1",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#7c2e02",
+                      "on-tertiary-fixed": "#2c1600",
+                      "inverse-surface": "#362f2c",
+                      "on-tertiary-container": "#fffbff",
+                      "surface": "#fff8f6",
+                      "on-surface-variant": "#55433b",
+                      "background": "#fff8f6",
+                      "tertiary-fixed-dim": "#f7bb7e",
+                      "surface-tint": "#9b4519",
+                      "tertiary-container": "#9b6a35",
+                      "surface-container-high": "#f3e5e0",
+                      "outline-variant": "#dcc1b7",
+                      "surface-bright": "#fff8f6",
+                      "surface-variant": "#ede0db",
+                      "inverse-primary": "#ffb596",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#ffb596",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#e5d7d2",
+                      "surface-container-highest": "#ede0db",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#f9ebe6",
+                      "on-secondary-fixed-variant": "#564336",
+                      "secondary": "#6f5a4d",
+                      "on-surface": "#211a17",
+                      "on-primary-fixed": "#360f00",
+                      "tertiary": "#7f521f",
+                      "on-background": "#211a17"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "5rem",
+                      "margin-safe": "1.5rem",
+                      "container-max": "1280px",
+                      "gutter": "2rem"
+              },
+              "fontFamily": {
+                      "headline-md": ["Playfair Display"],
+                      "body-md": ["Manrope"],
+                      "label-md": ["Manrope"],
+                      "headline-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"],
+                      "body-lg": ["Manrope"],
+                      "headline-lg-mobile": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .paper-grain {
+            position: relative;
+        }
+        .paper-grain::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background paper-grain">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md dark:bg-surface-dim/80 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">edit_note</span>
+<span class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface">Echos Scribes</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home &amp; Garden</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tools &amp; Smart Machines</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Computer &amp; Electronics</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Clothing &amp; Accessories</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:opacity-80 transition-opacity" data-icon="search">search</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">
+                    Subscribe
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-xl">About Echos Scribes</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+                        Dedicated to the art of curated living, we bridge the gap between technical precision and organic beauty through editorial storytelling that informs, inspires, and endures.
+                    </p>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl transform rotate-2">
+<img class="w-full h-full object-cover" data-alt="A warm, lifestyle photograph featuring a sun-drenched minimalist home office. A high-quality wooden desk holds a vintage journal, a sleek modern laptop, and a ceramic vase with dried eucalyptus. The lighting is soft and golden, characteristic of a late afternoon glow, creating a serene and premium editorial mood that emphasizes organic textures and high-end design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjbHDClsvulpJNzyt4_JAlWtIVu5BiWMVEZDPzb3OgZx26AM0ii5fv3xM8Wgz-5AxSoq4PQ8xXacc06TRtCMxpcRq1fkRp8E6NaBv7u6cKmml8WWdPKFwfg5ibjAaIewf9fHVxLl6w9dzvb9kttGZOmSbu8lIQyn_HpxfDKcIgzQlJKfa4BrmXC4d1ZU9IHEclp6cszsdURBwq8dRdPK-Edw-wXdGEYjBFU1M6SKFMb56zAPOl_jF2R7Wmw1ttNAR_CnJRaDvBROge"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Stats Strip -->
+<section class="bg-secondary-container py-12">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-wrap justify-between items-center gap-8">
+<div class="flex flex-col items-center text-center flex-1 min-w-[150px]">
+<span class="font-headline-md text-headline-md text-primary">500+</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase">Curated Articles</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col items-center text-center flex-1 min-w-[150px]">
+<span class="font-headline-md text-headline-md text-primary">120k</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase">Monthly Readers</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col items-center text-center flex-1 min-w-[150px]">
+<span class="font-headline-md text-headline-md text-primary">15+</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase">Design Awards</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col items-center text-center flex-1 min-w-[150px]">
+<span class="font-headline-md text-headline-md text-primary">24/7</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase">Inspired Community</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-section-gap space-y-section-gap">
+<!-- Our Story -->
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A vintage typewriter sitting on a marble surface next to a contemporary glass bottle of skincare serum. The composition is clean and minimalist, using a soft peach and terracotta color palette. Soft shadows suggest a nearby window. The image captures the fusion of classic editorial tradition with modern luxury lifestyle aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkgUjVLtNbb7k22LZMsnhcEXlXDZyWA5Zrrcq4143AQfMknB5aW8xaI6OwuyoA03CigsuUjTkxgtV5i3wKVEXsHw9c_S8bmDLvZOHe_-Es4wi669ueYYQjTYy4NKUGCfw73JkeMNDcq304wdoMcoAHQkO9lBrYTXHvLGKe7nMI7lVnYSnOlWC4pu5p3hxxLpGtCTbgh2dFda-q99x00GAJRhJqhJXEbUQrWJEmiuznUieslwupQbNd7Tji-VoWZMvamJsxOmtcYaTI"/>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">The Beginning</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Story</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Echos Scribes began in a small studio with a simple belief: that digital content shouldn't feel disposable. In a world of fast-scrolling feeds, we wanted to create a digital sanctuary where words carry weight and design fosters peace.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        What started as a personal blog has evolved into a multi-disciplinary publication covering everything from smart home automation to sustainable fashion, all seen through our unique lens of "New Editorial" clarity.
+                    </p>
+</div>
+</div>
+<!-- Our Mission -->
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-6">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Our Purpose</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Our mission is to help our readers navigate the modern world with intention. We strip away the noise to provide actionable insights on technology, home, and personal style without sacrificing the tactile warmth of high-end journalism.
+                    </p>
+<div class="pt-4 flex flex-col gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">spa</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Mindful Curation</h4>
+<p class="text-sm text-on-surface-variant">Every product and story is vetted for quality and ethical impact.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-lg">clarify</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Editorial Integrity</h4>
+<p class="text-sm text-on-surface-variant">We prioritize clarity and honesty over sensationalism.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Close-up of human hands carefully arranging artisanal linen fabrics and small smart-home sensors on a clean white table. The lighting is diffused and bright, creating a high-key light mode aesthetic. The color palette features soft blush, cream, and terracotta tones, reflecting an organic yet technologically sophisticated lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy04VaayUNMbm4V33GLd8aVzSZIPkzFI7KO_s4muEG9DGStQors5m8mt1_VnNXsIyBOmgLyE3PEPlBionVBHT5spmxFae7xiN7HNGTs7egVYK7NdxBH1IZ7kNLqVWY7-2biWGswFke7DE4IybSPuaW1GYgzeCt4IpAXnzA1ljE4jCS_yZOoHJPrnElFNvUHxqy-3TRPOZ0TlevrgPTUjqD1zAi9WEHw5VrgcSqLVjqkIGQCPD10lnLqK73-R0mwz7v0QktOIZtKBEx"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="bg-surface-container py-section-gap">
+<div class="max-w-container-max mx-auto px-gutter text-center space-y-16">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Meet the Scribes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Our diverse team of writers, designers, and tech enthusiasts work in harmony to bring you the best in contemporary editorial.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a woman with a warm, confident expression. She has dark hair styled in a simple, elegant way and wears a cream-colored silk blouse. The background is a soft, blurred studio setting with terracotta undertones. The lighting is flattering and soft, reflecting a premium and trustworthy brand persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO4ElP0bqSzeuGBtxcrOEjJsI9jBIBznZbpjliopYm0HtgMQ3x-zOX5A-eA59n_Ggpd-ZkYVJzwKHt3JwO4D1Czy_jchU0sYMk0Jx5Qzf5fqmC8XbNTQDFj4tBZYiuhPwsLowyJJOvsYhIhbf0iuvUh_VoOHO6PlweajREXTjvyR_EhCn7v1_HpMs5aew2RM3meCGmVSyExqKcZIvU6dTszf-2HIbUDEBC9bqyHW6Swwj7HbykzfAgLTDsnnt4Z05-DOiHVZrzaT_M"/>
+</div>
+<h3 class="mt-6 font-headline-sm text-headline-sm text-on-surface">Elena Rossi</h3>
+<p class="font-label-md text-label-md text-primary">Founder &amp; Editor</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a man in his 30s with a creative and approachable look. He wears a dark charcoal knit sweater and glasses. The background is a minimalist interior with clean lines and soft lighting. The image style is polished and editorial, fitting a high-end publication's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrDeH6TXqPwdyEZ8aur312lm1p5ytgWoDPY5h08rnsaIhvQ24ZQi1EGHsFwHoBmxz4a_TTw-1iKsJjdpovS01NwvoO4uV281gK75Uf9NTsyp5PdJz3LqZXM6wpZzPW3HuNt-hVo31IcKfZlIULGN8FuI049fwqYxImKbrwwB934gXc4GOetxdhvQM10DesVQlWv3uNXx0aCkBO8VPhzZkKCxscGUnbh1T_qxBGuGnshsZEFv7paCNSxKZY4GYXExqYQkQr00e5s6vj"/>
+</div>
+<h3 class="mt-6 font-headline-sm text-headline-sm text-on-surface">Marcus Thorne</h3>
+<p class="font-label-md text-label-md text-primary">Tech Lead</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="A smiling woman with light-colored hair, wearing a terracotta-colored linen dress. She looks directly into the camera with a friendly and inviting expression. The background consists of soft, out-of-focus plants, creating a natural and organic feel. The lighting is bright and airy, typical of a luxury lifestyle magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-R6qDZIavAKoU9dIGVp23yot0LD4fwWQTfgpuLYwX8oZArbHBJYMn3pntO_GYL0Xi3rKEpMScmUoVdc4eS-o2kDFu3329LChj99hbcluX2aFnNLheH_7Vhq3lAG699DgNR_dQybIBHeyJ_NSiW6SyWBCZGI1HlEJ-N9bbOkOErQ6u7GSGla3BBZ4RffNhz67-ufyf-SY-nxGXvwqhnsQZWY8__QdBkjmdfD6PB7kOvjHJmkGgbwn-9RVkNPRl4lZdxMHda-s2w66"/>
+</div>
+<h3 class="mt-6 font-headline-sm text-headline-sm text-on-surface">Sophie Chen</h3>
+<p class="font-label-md text-label-md text-primary">Design Director</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="w-32 h-32 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="A portrait of a man with a professional yet artistic vibe. He has short hair and a neat beard, wearing a light grey blazer over a white t-shirt. The setting is a modern loft with soft daylight. The image is crisp, with a focus on natural skin tones and a sophisticated, minimalist mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCIhsBChIVMjoXpkKBJVrSebJWrjZck0kf1C5pe-SrjLuMy16SkekxccE7Bg1kRGg3NWtRgE0UYqSvWZJuGtJdiHAjIesO5dHrI9ltvGoU6cXs0lkPlKXA2zMeMPNHwU__hvqNmedzGgXEIPktUIbWMgQvsb1qpmvRwh2eCbQUVQ3jX-WXrewDFoppR8VGcIkoRkgco7z2MQRvyC2l8wiaUODPkcCcMLgwDYcq5jbfmi47rxftxOS0oya5WGqMwobr2d04vz4clG6o"/>
+</div>
+<h3 class="mt-6 font-headline-sm text-headline-sm text-on-surface">Julian Vane</h3>
+<p class="font-label-md text-label-md text-primary">Lifestyle Writer</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 -z-10 opacity-5">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter text-center space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Join Our Journey</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+                    Stay inspired with weekly dispatches of curated beauty, technical wisdom, and editorial insight.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all shadow-lg">
+                        Explore the Archive
+                    </button>
+<button class="border border-primary text-primary px-10 py-4 rounded-full font-label-md text-label-md hover:bg-primary/5 active:scale-95 transition-all">
+                        Contact Us
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest py-section-gap text-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<span class="font-headline-sm text-headline-sm text-tertiary-fixed dark:text-tertiary block">Echos Scribes</span>
+<p class="font-body-md text-body-md opacity-80 leading-relaxed">
+                    Refining the digital experience through thoughtful storytelling and organic design.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-tertiary-fixed font-bold">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Home</a></li>
+<li><a class="font-label-md text-label-md text-tertiary-fixed font-bold" href="#">About Us</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Blog</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Contact</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Legal</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-tertiary-fixed font-bold">Categories</h4>
+<ul class="space-y-2">
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Home &amp; Garden</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Electronics</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Smart Living</a></li>
+<li><a class="font-label-md text-label-md text-surface-variant hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Style</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-tertiary-fixed font-bold">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-tertiary-fixed hover:text-inverse-surface transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-tertiary-fixed hover:text-inverse-surface transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-tertiary-fixed hover:text-inverse-surface transition-all" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter pt-8 mt-8 border-t border-surface-variant/10 text-center">
+<p class="font-label-md text-label-md opacity-60">© 2024 Echos Scribes. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth scroll interaction for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky header opacity change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
