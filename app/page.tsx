@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, CATEGORIES } from "@/lib/posts";
 import NewsletterForm from "@/components/NewsletterForm";
+import ShuffleHero from "@/components/ui/ShuffleHero";
 
 export const metadata: Metadata = {
   title: "Echos Scribes | Curated Lifestyle & Tech Journal",
@@ -26,80 +27,9 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section
-        className="relative overflow-hidden mb-20"
-        style={{ backgroundColor: "var(--color-surface-container-low)", borderRadius: "0 0 2.5rem 2.5rem" }}
-        aria-label="Featured article"
-      >
-        <div className="absolute inset-0 dot-pattern opacity-40" aria-hidden="true" />
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12 px-6 md:px-8 py-12 lg:py-20 max-w-[1280px] mx-auto">
-          {/* Text side */}
-          <div className="space-y-5 order-2 lg:order-1">
-            <span
-              className="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
-              style={{ backgroundColor: "var(--color-primary-fixed)", color: "var(--color-on-primary-fixed-variant)" }}
-            >
-              {featuredPost?.category ?? "Featured"}
-            </span>
-            <h1
-              className="font-semibold leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-              style={{ fontFamily: "var(--font-display)", color: "var(--color-on-surface)", letterSpacing: "-0.02em" }}
-            >
-              {featuredPost?.title ?? "The Art of Slow Living in a Fast Digital World"}
-            </h1>
-            <div
-              className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-wide"
-              style={{ color: "var(--color-on-surface-variant)" }}
-            >
-              <span>{featuredPost?.author ?? "Echos Scribes Team"}</span>
-              <span
-                className="w-1 h-1 rounded-full"
-                style={{ backgroundColor: "var(--color-outline-variant)" }}
-                aria-hidden="true"
-              />
-              <span>{featuredPost ? new Date(featuredPost.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : ""}</span>
-              {featuredPost?.readTime && (
-                <>
-                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "var(--color-outline-variant)" }} aria-hidden="true" />
-                  <span>{featuredPost.readTime}</span>
-                </>
-              )}
-            </div>
-            <p
-              className="text-base md:text-lg leading-relaxed max-w-lg"
-              style={{ color: "var(--color-on-surface-variant)" }}
-            >
-              {featuredPost?.excerpt}
-            </p>
-            {featuredPost && (
-              <Link
-                href={`/blog/${featuredPost.slug}`}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all hover:opacity-90 active:scale-95"
-                style={{ backgroundColor: "var(--color-primary)", color: "var(--color-on-primary)" }}
-              >
-                Read Feature Article
-                <span style={{ fontFamily: "Material Symbols Outlined", fontSize: "18px" }} aria-hidden="true">arrow_forward</span>
-              </Link>
-            )}
-          </div>
-          {/* Image side */}
-          <div className="relative h-72 sm:h-96 lg:h-[500px] w-full order-1 lg:order-2">
-            {featuredPost && (
-              <Image
-                src={featuredPost.featuredImage || '/images/blog-placeholder.jpg'}
-                alt={featuredPost.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover editorial-shadow"
-                style={{ borderRadius: "2rem" }}
-                priority
-              />
-            )}
-          </div>
-        </div>
-      </section>
+      <ShuffleHero />
 
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8 pt-12">
 
         {/* ── Categories ── */}
         <section className="mb-20" aria-label="Browse categories">
@@ -119,33 +49,51 @@ export default function HomePage() {
               <span style={{ fontFamily: "Material Symbols Outlined", fontSize: "16px" }} aria-hidden="true">arrow_forward</span>
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {CATEGORIES.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/blog?category=${cat.slug}`}
-                className="group bg-white p-6 md:p-8 rounded-3xl text-center editorial-shadow hover:-translate-y-1 transition-transform duration-300"
+                className="group relative block rounded-3xl overflow-hidden editorial-shadow h-[220px] md:h-[260px] transition-transform duration-[400ms] ease-in-out hover:-translate-y-2"
               >
+                {/* Background image */}
+                <Image
+                  src={`/images/categories/${cat.slug}.jpg.jpg`}
+                  alt={cat.label}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-[400ms] ease-in-out group-hover:scale-105"
+                />
+                {/* Warm gradient overlay — fades out on hover */}
                 <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:bg-[var(--color-primary-fixed)]"
-                  style={{ backgroundColor: "var(--color-surface-container-low)" }}
-                >
-                  <span
-                    style={{ fontFamily: "Material Symbols Outlined", fontSize: "28px", color: "var(--color-primary)" }}
-                    aria-hidden="true"
+                  className="absolute inset-0 transition-opacity duration-[400ms] ease-in-out group-hover:opacity-0"
+                  style={{
+                    background: "linear-gradient(160deg, rgba(33,26,23,0.50) 0%, rgba(151,67,23,0.72) 100%)",
+                  }}
+                />
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center h-full p-6 text-center">
+                  <div
+                    className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+                    style={{ backgroundColor: "rgba(255,255,255,0.18)", backdropFilter: "blur(4px)" }}
                   >
-                    {categoryIcons[cat.slug]}
-                  </span>
+                    <span
+                      style={{ fontFamily: "Material Symbols Outlined", fontSize: "28px", color: "#ffffff" }}
+                      aria-hidden="true"
+                    >
+                      {categoryIcons[cat.slug]}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-base md:text-lg font-semibold mb-1 leading-snug text-white"
+                    style={{ fontFamily: "var(--font-headline)" }}
+                  >
+                    {cat.label}
+                  </h3>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-white/80 transition-colors duration-[400ms] ease-in-out group-hover:text-white">
+                    {cat.description}
+                  </p>
                 </div>
-                <h3
-                  className="text-base md:text-lg font-semibold mb-1 leading-snug"
-                  style={{ fontFamily: "var(--font-headline)", color: "var(--color-on-surface)" }}
-                >
-                  {cat.label}
-                </h3>
-                <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--color-on-surface-variant)" }}>
-                  {cat.description}
-                </p>
               </Link>
             ))}
           </div>
